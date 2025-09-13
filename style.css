@@ -1880,3 +1880,96 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/*-----------------------------------*\
+  #TECH STACK & INTERESTS
+\*-----------------------------------*/
+
+.tech-stack,
+.interests {
+  margin-bottom: 30px;
+}
+
+.tech-stack-title,
+.interests-title {
+  margin-bottom: 20px;
+}
+
+.tech-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+
+.tech-category {
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.tech-category-title {
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 15px;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+}
+
+.tech-list li {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.tech-list li::before {
+  content: "▪";
+  color: var(--orange-yellow-crayola);
+  position: absolute;
+  left: 0;
+}
+
+.interests-list {
+  display: grid;
+  gap: 20px;
+}
+
+.interest-item {
+  background: var(--border-gradient-onyx);
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.interest-title {
+  color: var(--orange-yellow-crayola);
+  margin-bottom: 10px;
+}
+
+.interest-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+}
+
+@media (min-width: 580px) {
+  .interests-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .tech-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .interests-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
