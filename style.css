@@ -549,7 +549,6 @@ main {
     inset 0 1px 0 hsla(0, 0%, 100%, 0.1),
     0 0 15px hsla(210, 100%, 65%, 0.03);
   z-index: 5;
-  position: relative;
 }
 
 .navbar::before {
