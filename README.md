@@ -1,17 +1,27 @@
 # Portfolio
 
-This is a simple personal portfolio website built with HTML, CSS, JavaScript, and Bootstrap.
+Personal portfolio website with modern glassmorphism design.
 
 ## Features
 - Responsive design
-- Project showcase section
-- Easy to customize
+- Portfolio galleries (projects, creative, photos)
+- Contact form
+- Modern glassmorphism styling
 
 ## Tech Stack
 - HTML
 - CSS
 - JavaScript
-- Bootstrap
 
-## Getting Started
-Open `index.html` in your browser to view the portfolio.
+## Setup
+1. Open `index.html` in your browser
+2. Add favicon files to root directory (optional):
+   - `apple-touch-icon.png`
+   - `favicon-32x32.png` 
+   - `favicon-16x16.png`
+   - `site.webmanifest`
+
+## Customization
+- Replace images in `projects/`, `creative/`, `photos/` folders
+- Edit content in `index.html`
+- Modify styles in `style.css`
