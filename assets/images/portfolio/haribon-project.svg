@@ -1,0 +1,16 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0099cc;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad2)" stroke="#ffffff" stroke-width="2" rx="8"/>
+  <rect x="50" y="50" width="300" height="20" fill="rgba(255,255,255,0.6)" rx="4"/>
+  <rect x="50" y="80" width="200" height="15" fill="rgba(255,255,255,0.4)" rx="3"/>
+  <rect x="50" y="105" width="250" height="15" fill="rgba(255,255,255,0.4)" rx="3"/>
+  <circle cx="320" cy="80" r="30" fill="rgba(255,255,255,0.3)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)">HARIBON Project</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">AI-Powered Harmful Algal Bloom Detection</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Machine Learning • Data Science</text>
+</svg>

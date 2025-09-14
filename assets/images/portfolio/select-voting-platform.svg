@@ -1,0 +1,19 @@
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0099cc;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#006699;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad3)" stroke="#ffffff" stroke-width="2" rx="8"/>
+  <rect x="30" y="40" width="60" height="8" fill="rgba(255,255,255,0.6)" rx="2"/>
+  <rect x="100" y="40" width="80" height="8" fill="rgba(255,255,255,0.4)" rx="2"/>
+  <rect x="190" y="40" width="70" height="8" fill="rgba(255,255,255,0.5)" rx="2"/>
+  <rect x="50" y="70" width="300" height="40" fill="rgba(255,255,255,0.3)" rx="4"/>
+  <circle cx="80" cy="140" r="15" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="130" cy="140" r="15" fill="rgba(255,255,255,0.6)"/>
+  <circle cx="180" cy="140" r="15" fill="rgba(255,255,255,0.6)"/>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)">sELECT Platform</text>
+  <text x="200" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.6)">Secure Electronic Voting System</text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.5)">Web Development • UI/UX Design</text>
+</svg>
