@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kyelija</title>
+  <title>Kyelija's Portfolio</title>
 
   <!--
     - favicon
@@ -749,7 +749,7 @@
             <!-- Creative Works -->
             <div class="project-item" data-filter-item data-category="creative">
               <div class="project-img photo-only masonry-item">
-                <img src="./assets/images/portfolio/creative/BADMINTON BROCHURE.png" alt="Badminton Brochure Design" loading="lazy">
+                <img src="./assets/images/portfolio/creative/BADMINTON BROCHURE.png" alt="Badminton Brochure Design" loading="lazy" class="lightbox-trigger">
               </div>
             </div>
 
@@ -1012,6 +1012,18 @@
 
 
 
+
+  <!--
+    - image lightbox modal
+  -->
+  <div class="lightbox-overlay" id="lightbox-overlay">
+    <div class="lightbox-container">
+      <button class="lightbox-close" id="lightbox-close">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+      <img class="lightbox-image" id="lightbox-image" src="" alt="">
+    </div>
+  </div>
 
   <!--
     - custom js link

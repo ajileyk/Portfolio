@@ -92,6 +92,66 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
+// Initialize filter on page load - show only projects by default
+document.addEventListener('DOMContentLoaded', function() {
+  filterFunc('projects');
+});
+
+
+
+// lightbox functionality
+const lightboxOverlay = document.querySelector('#lightbox-overlay');
+const lightboxImage = document.querySelector('#lightbox-image');
+const lightboxClose = document.querySelector('#lightbox-close');
+
+// Function to open lightbox
+const openLightbox = function(imageSrc, imageAlt) {
+  lightboxImage.src = imageSrc;
+  lightboxImage.alt = imageAlt;
+  lightboxOverlay.classList.add('active');
+  document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+// Function to close lightbox
+const closeLightbox = function() {
+  lightboxOverlay.classList.remove('active');
+  document.body.style.overflow = 'auto'; // Restore scrolling
+  setTimeout(() => {
+    lightboxImage.src = '';
+    lightboxImage.alt = '';
+  }, 300);
+}
+
+// Add click events to creative and photos images
+document.addEventListener('click', function(e) {
+  // Check if clicked element is an image in creative or photos section
+  const projectItem = e.target.closest('.project-item');
+  if (projectItem && e.target.tagName === 'IMG') {
+    const category = projectItem.dataset.category;
+    if (category === 'creative' || category === 'photos') {
+      e.preventDefault();
+      openLightbox(e.target.src, e.target.alt);
+    }
+  }
+});
+
+// Close lightbox when clicking close button
+lightboxClose.addEventListener('click', closeLightbox);
+
+// Close lightbox when clicking overlay (outside image)
+lightboxOverlay.addEventListener('click', function(e) {
+  if (e.target === lightboxOverlay) {
+    closeLightbox();
+  }
+});
+
+// Close lightbox with Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) {
+    closeLightbox();
+  }
+});
+
 
 
 // contact form variables
