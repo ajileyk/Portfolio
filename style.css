@@ -1408,27 +1408,25 @@ main {
   margin-bottom: 10px;
 }
 
-/* Masonry layout for photo galleries */
-.project-list.masonry {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  grid-auto-rows: 10px;
-  gap: 15px;
-  align-items: start;
+/* Masonry Grid Layout */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 25px;
+  grid-template-columns: none !important;
 }
 
-.project-list.masonry .project-item {
-  grid-row-end: span var(--row-span);
-}
-
-.project-list.masonry .project-item.active {
-  padding: 0;
-  margin: 0;
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 25px;
+  display: inline-block;
+  width: 100%;
 }
 
 .project-item { 
   display: none; 
   list-style: none;
+  break-inside: avoid;
+  margin-bottom: 25px;
 }
 
 .project-item.active {
@@ -1446,6 +1444,8 @@ main {
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   cursor: pointer;
+  break-inside: avoid;
+  margin-bottom: 25px;
 }
 
 .project-item.active:hover {
@@ -1462,15 +1462,18 @@ main {
   100% { transform: scale(1); }
 }
 
-/* Project Cards with 4:3 Image and Content */
+/* Project Cards with Natural Image Aspect Ratios */
 .project-img {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/3;
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 15px;
-  cursor: pointer;
+}
+
+/* Projects maintain 4:3 aspect ratio */
+.project-item[data-category="projects"] .project-img {
+  aspect-ratio: 4/3;
 }
 
 .project-img img {
@@ -1478,6 +1481,7 @@ main {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block;
 }
 
 .project-item:hover .project-img img {
@@ -1503,54 +1507,37 @@ main {
   margin-bottom: 0;
 }
 
-/* Photo-only cards with natural aspect ratios */
+/* Photo-only cards maintain natural aspect ratios */
 .project-img.photo-only {
-  margin: 0;
-  padding: 0;
-  aspect-ratio: auto;
+  margin-bottom: 0;
   border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
-  height: auto;
-  width: 100%;
-  position: relative;
 }
 
 .project-img.photo-only img {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
+  object-fit: contain;
 }
 
 .project-item.active .project-img.photo-only {
-  margin: 0;
-  padding: 0;
+  margin-bottom: 0;
 }
 
 .project-item.active .project-img.photo-only:hover img {
-  transform: scale(1.02);
-}
-
-/* Remove glassmorphism background for photo-only items in masonry */
-.project-list.masonry .project-item.active {
-  background: none;
-  border: none;
-  backdrop-filter: none;
-  padding: 0;
-}
-
-.project-list.masonry .project-item.active:hover {
-  transform: none;
-  box-shadow: none;
-  border: none;
-}
-
-.project-list.masonry .project-img.photo-only:hover img {
   transform: scale(1.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Masonry item specific styling */
+.project-img.masonry-item {
+  break-inside: avoid;
+  display: block;
+}
+
+.project-img.masonry-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 /* Filter buttons styling */
@@ -1584,145 +1571,6 @@ main {
   box-shadow: 
     0 10px 25px hsla(0, 0%, 0%, 0.2),
     inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
-}
-
-/* Lightbox Styles */
-.lightbox {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  backdrop-filter: blur(20px);
-}
-
-.lightbox.active {
-  display: flex;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-}
-
-.lightbox-close {
-  position: absolute;
-  top: -50px;
-  right: -50px;
-  background: linear-gradient(
-    135deg,
-    hsla(240, 2%, 16%, 0.8) 0%,
-    hsla(240, 2%, 13%, 0.9) 100%
-  );
-  border: 1px solid hsla(210, 100%, 65%, 0.2);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  color: var(--white-2);
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.lightbox-close:hover {
-  background: linear-gradient(
-    135deg,
-    hsla(210, 100%, 65%, 0.2) 0%,
-    hsla(210, 100%, 65%, 0.1) 100%
-  );
-  border-color: hsla(210, 100%, 65%, 0.4);
-  color: var(--electric-blue);
-  transform: scale(1.1);
-}
-
-.lightbox-nav {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(
-    135deg,
-    hsla(240, 2%, 16%, 0.8) 0%,
-    hsla(240, 2%, 13%, 0.9) 100%
-  );
-  border: 1px solid hsla(210, 100%, 65%, 0.2);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  color: var(--white-2);
-  font-size: 20px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-}
-
-.lightbox-nav:hover {
-  background: linear-gradient(
-    135deg,
-    hsla(210, 100%, 65%, 0.2) 0%,
-    hsla(210, 100%, 65%, 0.1) 100%
-  );
-  border-color: hsla(210, 100%, 65%, 0.4);
-  color: var(--electric-blue);
-}
-
-.lightbox-prev {
-  left: -80px;
-}
-
-.lightbox-next {
-  right: -80px;
-}
-
-@media (max-width: 768px) {
-  .lightbox-close {
-    top: 20px;
-    right: 20px;
-  }
-  
-  .lightbox-prev {
-    left: 20px;
-  }
-  
-  .lightbox-next {
-    right: 20px;
-  }
-  
-  .project-list.masonry {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-list.masonry {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    grid-auto-rows: 8px;
-  }
 }
 
 .project-title,
@@ -2386,16 +2234,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list { 
-    grid-template-columns: 1fr 1fr; 
-    gap: 30px;
+  .project-list.masonry-grid { 
+    column-count: 2;
+    column-gap: 30px;
   }
-  
-  .project-list.masonry {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-  }
-  
   .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
 
@@ -2516,14 +2358,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { 
-    grid-template-columns: 1fr 1fr; 
-    gap: 35px;
-  }
-  
-  .project-list.masonry {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+  .project-list.masonry-grid { 
+    column-count: 2;
+    column-gap: 35px;
   }
 
 
