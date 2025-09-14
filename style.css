@@ -840,8 +840,9 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  min-width: 120px;
   scroll-snap-align: start;
+  flex-shrink: 0;
 }
 
 .clients-item img {
@@ -851,6 +852,65 @@ main {
 }
 
 .clients-item img:hover { filter: grayscale(0); }
+
+.tech-logo {
+  background: linear-gradient(
+    135deg,
+    hsla(240, 2%, 16%, 0.6) 0%,
+    hsla(240, 2%, 13%, 0.8) 100%
+  );
+  border: 1px solid hsla(210, 100%, 65%, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    hsla(210, 100%, 65%, 0.2),
+    transparent
+  );
+  border-radius: 12px 12px 0 0;
+}
+
+.tech-logo:hover {
+  background: linear-gradient(
+    135deg,
+    hsla(240, 2%, 18%, 0.7) 0%,
+    hsla(240, 2%, 15%, 0.9) 100%
+  );
+  border-color: hsla(210, 100%, 65%, 0.15);
+  box-shadow: 
+    0 8px 25px hsla(0, 0%, 0%, 0.2),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+}
+
+.tech-logo img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+  filter: none !important;
+  transition: all 0.3s ease;
+}
+
+.tech-logo:hover img {
+  transform: scale(1.1);
+}
 
 
 
