@@ -674,7 +674,10 @@ main {
 
 .service-content-box { text-align: center; }
 
-.service-item-title { margin-bottom: 7px; }
+.service-item-title { 
+  margin-bottom: 7px;
+  color: var(--electric-blue);
+}
 
 .service-item-text {
   color: var(--light-gray);
@@ -2534,11 +2537,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   background-clip: text;
 }
 
-.service-item:hover .service-icon-box {
-  background: var(--bg-gradient-electric-blue);
-  transform: scale(1.1);
-  transition: all 0.3s ease;
-}
+
 
 .timeline-item::after {
   background: var(--bg-gradient-electric-blue);
