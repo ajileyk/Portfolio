@@ -401,7 +401,15 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.avatar-box img {
+  width: 185px;
+  height: auto;
+  border-radius: 25px;
+  object-fit: cover;
 }
 
 .info-content .name {
