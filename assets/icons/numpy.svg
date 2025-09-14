@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="50" height="50">
+  <rect width="100" height="100" fill="#013243" rx="10"/>
+  <text x="50" y="35" text-anchor="middle" fill="#4DABCF" font-family="Arial, sans-serif" font-size="12" font-weight="bold">NumPy</text>
+  <circle cx="30" cy="60" r="8" fill="#4DABCF"/>
+  <circle cx="50" cy="60" r="8" fill="#4DABCF"/>
+  <circle cx="70" cy="60" r="8" fill="#4DABCF"/>
+  <rect x="25" y="75" width="50" height="3" fill="#4DABCF"/>
+</svg>
