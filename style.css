@@ -1404,11 +1404,14 @@ main {
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 25px;
   margin-bottom: 10px;
 }
 
-.project-item { display: none; }
+.project-item { 
+  display: none; 
+  list-style: none;
+}
 
 .project-item.active {
   display: block;
@@ -1420,10 +1423,11 @@ main {
   );
   border: 1px solid hsla(210, 100%, 65%, 0.1);
   border-radius: 16px;
-  padding: 0;
+  padding: 20px;
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .project-item.active:hover {
@@ -1440,63 +1444,94 @@ main {
   100% { transform: scale(1); }
 }
 
-.project-item > a { width: 100%; }
-
+/* Project Cards with 4:3 Image and Content */
 .project-img {
   position: relative;
   width: 100%;
-  height: 200px;
-  border-radius: 16px;
+  aspect-ratio: 4/3;
+  border-radius: 12px;
   overflow: hidden;
   margin-bottom: 15px;
 }
-
-.project-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.project-item > a:hover .project-img::before { background: hsla(0, 0%, 0%, 0.5); }
-
-.project-item-icon-box {
-  --scale: 0.8;
-
-  background: var(--jet);
-  color: var(--electric-blue);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(var(--scale));
-  font-size: 20px;
-  padding: 18px;
-  border-radius: 12px;
-  opacity: 0;
-  z-index: 1;
-  transition: var(--transition-1);
-}
-
-.project-item > a:hover .project-item-icon-box {
-  --scale: 1;
-  opacity: 1;
-}
-
-.project-item-icon-box ion-icon { --ionicon-stroke-width: 50px; }
 
 .project-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: var(--transition-1);
+  transition: transform 0.3s ease;
 }
 
-.project-item > a:hover img { transform: scale(1.1); }
+.project-item:hover .project-img img {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 0;
+}
+
+.project-title {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-400);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.project-description {
+  color: var(--light-gray-70);
+  font-size: var(--fs-6);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Photo-only cards for Photography and Graphic Design */
+.project-img.photo-only {
+  margin-bottom: 0;
+  aspect-ratio: 1/1;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.project-item.active .project-img.photo-only {
+  margin-bottom: 0;
+}
+
+.project-item.active .project-img.photo-only:hover img {
+  transform: scale(1.1);
+}
+
+/* Filter buttons styling */
+.portfolio-filter {
+  background: linear-gradient(
+    135deg,
+    hsla(240, 2%, 16%, 0.7) 0%,
+    hsla(240, 2%, 13%, 0.9) 100%
+  );
+  border: 1px solid hsla(210, 100%, 65%, 0.1);
+  border-radius: 12px;
+  padding: 10px 20px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter:hover,
+.portfolio-filter.active {
+  background: linear-gradient(
+    135deg,
+    hsla(210, 100%, 65%, 0.1) 0%,
+    hsla(210, 100%, 65%, 0.05) 100%
+  );
+  border-color: hsla(210, 100%, 65%, 0.3);
+  color: var(--electric-blue);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px hsla(0, 0%, 0%, 0.2),
+    inset 0 1px 0 hsla(0, 0%, 100%, 0.1);
+}
 
 .project-title,
 .project-category { margin-left: 10px; }
@@ -1654,7 +1689,7 @@ main {
   width: 100%;
   height: 100%;
   border: none;
-  filter: grayscale(1) invert(1);
+  filter: contrast(1.2) brightness(0.8) saturate(0.3);
 }
 
 .contact-form { margin-bottom: 10px; }
@@ -2159,7 +2194,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* portfolio and blog grid */
 
-  .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
+  .project-list { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 30px;
+  }
+  .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
@@ -2279,7 +2318,10 @@ textarea.form-input::-webkit-resizer { display: none; }
    * PORTFOLIO
    */
 
-  .project-list { grid-template-columns: repeat(3, 1fr); }
+  .project-list { 
+    grid-template-columns: 1fr 1fr; 
+    gap: 35px;
+  }
 
 
 

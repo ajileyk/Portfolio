@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
+  <title>Kyelija</title>
 
   <!--
     - favicon
@@ -652,23 +652,15 @@
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="portfolio-filter active" data-filter-btn>Projects</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Web design</button>
+              <button class="portfolio-filter" data-filter-btn>Photography</button>
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>Machine Learning</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Data Science</button>
+              <button class="portfolio-filter" data-filter-btn>Graphic Design</button>
             </li>
 
           </ul>
@@ -677,7 +669,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-value" data-select-value>Select category</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -688,23 +680,15 @@
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button data-select-item>Projects</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Web design</button>
+                <button data-select-item>Photography</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>Machine Learning</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Data Science</button>
+                <button data-select-item>Graphic Design</button>
               </li>
 
             </ul>
@@ -713,96 +697,102 @@
 
           <ul class="project-list">
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio/haribon-project.svg" alt="HARIBON AI Project" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">HARIBON Project</h3>
-
-                <p class="project-category">Machine Learning</p>
-
-              </a>
+            <li class="project-item active" data-filter-item data-category="projects">
+              <div class="project-img">
+                <img src="./assets/images/portfolio/haribon-preview.jpg" alt="HARIBON Project" loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">HARIBON (Harmful Algal Bloom Intelligent Observer Network)</h3>
+                <p class="project-description">
+                  A machine learning–powered early warning system that integrates satellite environmental data to forecast harmful algal blooms up to 5 days in advance. Built to support coastal communities, aquaculture operators, and public health agencies in Western Visayas. Group project by Badminton Girls, Champion – 2025 AI Fest National AI Hackathon.
+                </p>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio/select-voting-platform.svg" alt="sELECT Voting Platform" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">sELECT Platform</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
+            <li class="project-item active" data-filter-item data-category="projects">
+              <div class="project-img">
+                <img src="./assets/images/portfolio/commute-iloilo-preview.jpg" alt="Commute Iloilo" loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Commute Iloilo</h3>
+                <p class="project-description">
+                  A web application designed to simplify daily commuting in Iloilo City by mapping routes, transfers, and available public transport options. Its goal is to make commuting more transparent and efficient for local residents. Ongoing personal project.
+                </p>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio/portfolio-website.svg" alt="Portfolio Website" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Portfolio Website</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
+            <li class="project-item active" data-filter-item data-category="projects">
+              <div class="project-img">
+                <img src="./assets/images/portfolio/melanie-martinez-preview.jpg" alt="Melanie Martinez Website" loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Melanie Martinez Website Redesign</h3>
+                <p class="project-description">
+                  A creative redesign of the official Melanie Martinez website, focusing on clean layouts and user-friendly navigation. Final project for Web Development.
+                </p>
+              </div>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/portfolio/data-science-project.svg" alt="Data Science Project" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Data Analytics</h3>
-
-                <p class="project-category">Data Science</p>
-
-              </a>
+            <li class="project-item active" data-filter-item data-category="projects">
+              <div class="project-img">
+                <img src="./assets/images/portfolio/genetree-preview.jpg" alt="GeneTree Project" loading="lazy">
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">GeneTree: Mapping Genetic Connections Among Species</h3>
+                <p class="project-description">
+                  A computational tool that visualizes genetic relationships by applying graph theory principles to taxonomic data. Uses Prim's algorithm to generate a Minimum Spanning Tree (MST), highlighting meaningful genetic connections with minimal redundancy. Final project for Data Structures and Algorithms.
+                </p>
+              </div>
             </li>
 
+            <!-- Photography Items -->
+            <li class="project-item" data-filter-item data-category="photography">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/photo-1.jpg" alt="Photography Sample 1" loading="lazy">
+              </div>
+            </li>
 
+            <li class="project-item" data-filter-item data-category="photography">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/photo-2.jpg" alt="Photography Sample 2" loading="lazy">
+              </div>
+            </li>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+            <li class="project-item" data-filter-item data-category="photography">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/photo-3.jpg" alt="Photography Sample 3" loading="lazy">
+              </div>
+            </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+            <li class="project-item" data-filter-item data-category="photography">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/photo-4.jpg" alt="Photography Sample 4" loading="lazy">
+              </div>
+            </li>
 
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
+            <!-- Graphic Design Items -->
+            <li class="project-item" data-filter-item data-category="graphic design">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/design-1.jpg" alt="Graphic Design Sample 1" loading="lazy">
+              </div>
+            </li>
 
-                <h3 class="project-title">Arrival</h3>
+            <li class="project-item" data-filter-item data-category="graphic design">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/design-2.jpg" alt="Graphic Design Sample 2" loading="lazy">
+              </div>
+            </li>
 
-                <p class="project-category">Web development</p>
+            <li class="project-item" data-filter-item data-category="graphic design">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/design-3.jpg" alt="Graphic Design Sample 3" loading="lazy">
+              </div>
+            </li>
 
-              </a>
+            <li class="project-item" data-filter-item data-category="graphic design">
+              <div class="project-img photo-only">
+                <img src="./assets/images/portfolio/design-4.jpg" alt="Graphic Design Sample 4" loading="lazy">
+              </div>
             </li>
 
           </ul>

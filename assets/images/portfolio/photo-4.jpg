@@ -1,0 +1,9 @@
+<!-- Placeholder photography image -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#2a2a2a"/>
+  <path d="M50 150 L150 50 L250 150 L150 250 Z" fill="#64ffda" opacity="0.3"/>
+  <circle cx="150" cy="150" r="30" fill="none" stroke="#64ffda" stroke-width="2" opacity="0.5"/>
+  <text x="150" y="270" font-family="Arial" font-size="12" fill="#64ffda" text-anchor="middle">
+    Photography Sample
+  </text>
+</svg>

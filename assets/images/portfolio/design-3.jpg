@@ -1,0 +1,10 @@
+<!-- Placeholder graphic design image -->
+<svg width="300" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="300" height="300" fill="#2a2a2a"/>
+  <polygon points="150,60 180,120 120,120" fill="#64ffda" opacity="0.4"/>
+  <polygon points="150,140 190,200 110,200" fill="#64ffda" opacity="0.3"/>
+  <rect x="130" y="220" width="40" height="20" rx="3" fill="#64ffda" opacity="0.2"/>
+  <text x="150" y="270" font-family="Arial" font-size="12" fill="#64ffda" text-anchor="middle">
+    Graphic Design Sample
+  </text>
+</svg>
