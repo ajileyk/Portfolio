@@ -1,27 +1,22 @@
-# Portfolio
+# Portfolio  
 
-Personal portfolio website with modern glassmorphism design.
+Personal portfolio website of **Kyla Elijah Ramiro** — a BS Computer Science student majorg in Artificial Intelligence at West Visayas State University – CICT.  
+This portfolio is developed as a requirement for **CC 206 (Application Development and Emerging Technologies)**.  
+## About Me  
+Hi, I’m Kye. I’m 20, a girl in STEM, and currently exploring the intersections of code, design, and research. I believe technology is not just about systems but also about creativity and imagination. Through programming, design, photography, and writing, I aim to build work that is both innovative and human-centered.  
 
-## Features
-- Responsive design
-- Portfolio galleries (projects, creative, photos)
-- Contact form
-- Modern glassmorphism styling
+## Contents  
+- **About Me** – Introduction, journey in STEM, and creative outlets  
+- **Resume** – Education, experience, skills, and tools  
+- **Portfolio Projects** – Academic, hackathon, and personal projects in AI, software, and design  
+- **Contact** – Ways to connect and collaborate  
 
-## Tech Stack
-- HTML
-- CSS
-- JavaScript
+## Features  
+- Responsive glassmorphism-inspired design  
+- Project galleries (tech, creative, photography)  
+- Resume and tech stack highlights  
+- Contact form for collaborations or inquiries  
 
-## Setup
-1. Open `index.html` in your browser
-2. Add favicon files to root directory (optional):
-   - `apple-touch-icon.png`
-   - `favicon-32x32.png` 
-   - `favicon-16x16.png`
-   - `site.webmanifest`
-
-## Customization
-- Replace images in `projects/`, `creative/`, `photos/` folders
-- Edit content in `index.html`
-- Modify styles in `style.css`
+## Tech Stack  
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap  
+- **Version Control & Hosting:** GitHub, GitHub Pages  
