@@ -2,6 +2,55 @@
 
 
 
+// iOS-style Loading Screen functionality
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  const body = document.body;
+  
+  // Add loading class to body initially
+  body.classList.add('loading');
+  
+  // iOS-like loading experience with natural timing
+  setTimeout(() => {
+    // Add subtle scale animation before fade out
+    loadingScreen.style.transform = 'scale(0.98)';
+    
+    setTimeout(() => {
+      // Start fade out animation with iOS-style easing
+      loadingScreen.classList.add('fade-out');
+      body.classList.remove('loading');
+      
+      // Remove loading screen from DOM after animation completes
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 1000); // Match the CSS transition duration
+      
+    }, 200); // Brief scale delay for iOS feel
+    
+  }, 2000); // 2 second minimum loading time for iOS-like experience
+});
+
+// Preload critical resources
+document.addEventListener('DOMContentLoaded', function() {
+  // Preload main profile image
+  const profileImg = new Image();
+  profileImg.src = './assets/images/avatars/profile.JPG';
+  
+  // Preload any other critical assets
+  const criticalImages = [
+    './assets/images/service-ai.svg',
+    './assets/images/service-uiux.svg',
+    './assets/images/service-creative.svg'
+  ];
+  
+  criticalImages.forEach(src => {
+    const img = new Image();
+    img.src = src;
+  });
+});
+
+
+
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
